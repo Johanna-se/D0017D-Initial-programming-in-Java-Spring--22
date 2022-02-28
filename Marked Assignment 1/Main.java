@@ -15,19 +15,19 @@ class Main
   public static void main(String[] args) 
   {
     //sets storage power of car batteri
-    float STORAGE_POWER = 35.8f; 
+    final float STORAGE_POWER = 35.8f; 
 
     //Initiate tre currents as constants
-    int CURRENT_LOW = 10;
-    int CURRENT_MEDIUM = 16;
-    int CURRENT_HIGH = 32;
+    final int CURRENT_LOW = 10;
+    final int CURRENT_MEDIUM = 16;
+    final int CURRENT_HIGH = 32;
 
     //Initiate two voltage as constants
-    int VOLTAGE_SINGEL = 230;
-    int VOLTAGE_THREE = 400;
+    final int VOLTAGE_SINGEL = 230;
+    final int VOLTAGE_THREE = 400;
 
     //Initiate constant and variable for recalculation of charging power and time
-    int NO_OF_DECIMALS = 2;
+    final int NO_OF_DECIMALS = 2;
     double scale;
     
     //Inititae variables for charging power
