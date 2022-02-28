@@ -13,7 +13,7 @@
 *2. Initiate int milesDriven = 1, gallonsUsed 
 *3. Initiate float totalMilesPerGallon = 0, milesPerGallon
 *4. prompt user
-*5. 	print "How many miles driven for this trip? to exit enter -1"
+*5.		print "How many miles driven for this trip? to exit enter -1"
 *6.		milesDriven = user input	
 *7. While milesDriven != -1
 *8.		print "How many gallons were used for this trip?"
@@ -29,42 +29,42 @@ import java.util.Scanner; // program uses class Scanner
 
 class GasMileage 
 {
-  public static void main(String[] args) 
-  {
-	// create Scanner to obtain input from command window
-    Scanner input = new Scanner(System.in);
+	public static void main(String[] args) 
+	{
+		// create Scanner to obtain input from command window
+		Scanner input = new Scanner(System.in);
     
-    //initiate variabls
-    int milesDriven = 1;
-    int gallonsUsed;
-    float milesPerGallon;
-    float totalMilesPerGallon = 0;
+		//initiate variabls
+		int milesDriven = 1;
+		int gallonsUsed;
+		float milesPerGallon;
+		float totalMilesPerGallon = 0;
 
 
     
-    // processing phase
-    // prompt for input and read milesDriven from user
-    System.out.print("How many miles were driven for this trip? to exit enter -1: ");
-    milesDriven = input.nextInt();
+		// processing phase
+		// prompt for input and read milesDriven from user
+		System.out.print("How many miles were driven for this trip? to exit enter -1: ");
+		milesDriven = input.nextInt();
 
-    // loop until sentinel value read from user
-    while (milesDriven != -1) {
-      System.out.print("How many gallons were used for this trip?: ");
-      gallonsUsed = input.nextInt();
+		// loop until sentinel value read from user
+		while (milesDriven != -1) {
+			System.out.print("How many gallons were used for this trip?: ");
+			gallonsUsed = input.nextInt();
       
-      milesPerGallon = (float) milesDriven / (float) gallonsUsed;
+			milesPerGallon = (float) milesDriven / (float) gallonsUsed;
         
-      totalMilesPerGallon += milesPerGallon;
+			totalMilesPerGallon += milesPerGallon;
 
-      System.out.println("The miles per gallon for this trip was " + milesPerGallon + " and the total miles per gallon so far is " + totalMilesPerGallon);
+			System.out.println("The miles per gallon for this trip was " + milesPerGallon + " and the total miles per gallon so far is " + totalMilesPerGallon);
 
-      //prompt the user to enter miles or exit
-      System.out.print("How many miles were driven for this trip? to exit enter -1: ");
-      milesDriven = input.nextInt();
-    }
+			//prompt the user to enter miles or exit the loop
+			System.out.print("How many miles were driven for this trip? to exit enter -1: ");
+			milesDriven = input.nextInt();
+		}
 
-    
-    // termination phase
-    System.out.println("The total miles per gallon for all trips was " + totalMilesPerGallon);
-  }
+		// termination phase
+		System.out.println("The total miles per gallon for all trips was " + totalMilesPerGallon);
+	}
  }
+ 
