@@ -2,7 +2,7 @@
 *The program calculates and presents the charging time for an electric car in a table depending on different combinations of current and voltage.
 * 
 * pseudokod for project:
-* 1. Creats variables for currents and voltage,
+* 1. Inititate constants and variables,
 * 2. calculates charging powers in kW and charging time
 * 3. the calculations for charging power and charging time are rounded to two decimals
 * 4. Print the table
@@ -15,59 +15,85 @@ class Main
   public static void main(String[] args) 
   {
     //sets storage power of car batteri
-    float storagePower = 35.8f; 
+    float STORAGE_POWER = 35.8f; 
 
-    //Sets the tre currents as variables
-    int currentOne = 10;
-    int currentTwo = 16;
-    int currentThree = 32;
+    //Initiate tre currents as constants
+    int CURRENT_LOW = 10;
+    int CURRENT_MEDIUM = 16;
+    int CURRENT_HIGH = 32;
 
-    //Sets the two voltage as variables
-    int voltageSingel = 230;
-    int voltageThree = 400;
+    //Initiate two voltage as constants
+    int VOLTAGE_SINGEL = 230;
+    int VOLTAGE_THREE = 400;
+
+    //Initiate constant and variable for recalculation of charging power and time
+    int NO_OF_DECIMALS = 2;
+    double scale;
+    
+    //Inititae variables for charging power
+    float chargeLowSingel;
+    double chargeMediumSingel;
+    double chargeLowThree;
+    double chargeMediumThree;
+    double chargeHighThree;
+
+    //Initiate variables for carging time
+    double timeLowSingel;
+    double timeMediumSingel;
+    double timeLowThree;
+    double timeMediumThree;
+    double timeHighThree;
 
 
+    
     //calculates the charging power (in kW) for singel phase voltage
-    float chargeOneSingel = (currentOne * voltageSingel)/1000F;
-    double chargeTwoSingel = (currentTwo * voltageSingel)/1000F;
+    chargeLowSingel = (CURRENT_LOW * VOLTAGE_SINGEL)/1000F;
+    chargeMediumSingel = (CURRENT_MEDIUM * VOLTAGE_SINGEL)/1000F;
+    
     //calculates the charging power (in kW) for three phase voltage
-    double chargeOneThree = (currentOne * voltageThree * Math.sqrt(3))/1000F;
-    double chargeTwoThree = (currentTwo * voltageThree * Math.sqrt(3))/1000F;
-    double chargeThreeThree = (currentThree * voltageThree * Math.sqrt(3))/1000F;
+    chargeLowThree = (CURRENT_LOW * VOLTAGE_THREE * Math.sqrt(3))/1000F;
+    chargeMediumThree = (CURRENT_MEDIUM * VOLTAGE_THREE * Math.sqrt(3))/1000F;
+    chargeHighThree = (CURRENT_HIGH * VOLTAGE_THREE * Math.sqrt(3))/1000F;
 
+
+    
     //calculates the 5 carging times
-    double timeOneSingel = storagePower / chargeOneSingel;
-    double timeTwoSingel = storagePower / chargeTwoSingel;
-    double timeOneThree = storagePower / chargeOneThree;
-    double timeTwoThree = storagePower / chargeTwoThree;
-    double timeThreeThree = storagePower / chargeThreeThree;
+    timeLowSingel = STORAGE_POWER / chargeLowSingel;
+    timeMediumSingel = STORAGE_POWER / chargeMediumSingel;
+    timeLowThree = STORAGE_POWER / chargeLowThree;
+    timeMediumThree = STORAGE_POWER / chargeMediumThree;
+    timeHighThree = STORAGE_POWER/ chargeHighThree;
 
+
+    
     //Recalulates the charging power and charging time to two decimals
-    //Constants and variables needed
-    int noOfDecimals = 2;
-    double scale = 0;
-    scale = Math.pow(10, noOfDecimals); 
+    scale = Math.pow(10, NO_OF_DECIMALS); 
+    
     //Recalulations of charging power
-    chargeTwoSingel = Math.round(chargeTwoSingel * scale) / scale;
-    chargeOneThree = Math.round(chargeOneThree * scale) / scale;
-    chargeTwoThree = Math.round(chargeTwoThree * scale) / scale;
-    chargeThreeThree = Math.round(chargeThreeThree * scale) / scale;
+    chargeMediumSingel = Math.round(chargeMediumSingel * scale) / scale;
+    chargeLowThree = Math.round(chargeLowThree * scale) / scale;
+    chargeMediumThree = Math.round(chargeMediumThree * scale) / scale;
+    chargeHighThree = Math.round(chargeHighThree * scale) / scale;
+
+    
+    
     //Recalulations of charging Time
-    timeOneSingel = Math.round(timeOneSingel * scale) / scale;
-    timeTwoSingel = Math.round(timeTwoSingel * scale) / scale;
-    timeOneThree = Math.round(timeOneThree * scale) / scale;
-    timeTwoThree = Math.round(timeTwoThree * scale) / scale;
-    timeThreeThree = Math.round(timeThreeThree * scale) / scale;
+    timeLowSingel = Math.round(timeLowSingel * scale) / scale;
+    timeMediumSingel = Math.round(timeMediumSingel * scale) / scale;
+    timeLowThree = Math.round(timeLowThree * scale) / scale;
+    timeMediumThree = Math.round(timeMediumThree * scale) / scale;
+    timeHighThree = Math.round(timeHighThree * scale) / scale;
 
 
+    
     //Print the table
-    System.out.print("Batteri " + storagePower + "(kWh)\n");
+    System.out.print("Batteri " + STORAGE_POWER + "(kWh)\n");
     System.out.print("Ström(A) \t Spänning(V) \t Laddeffekt (kW) \t Laddningstid(h)\n"); //prints the labels for the columns
-    System.out.print(currentOne + "\t\t\t\t" + voltageSingel + "\t\t\t\t" + chargeOneSingel + "\t\t\t\t\t" + timeOneSingel + "\n");
-    System.out.print(currentTwo + "\t\t\t\t" + voltageSingel + "\t\t\t\t" + chargeTwoSingel + "\t\t\t\t" + timeTwoSingel + "\n");
-    System.out.print(currentOne + "\t\t\t\t" + voltageThree + "\t\t\t\t" + chargeOneThree + "\t\t\t\t" + timeOneThree + "\n"); 
-    System.out.print(currentTwo + "\t\t\t\t" + voltageThree + "\t\t\t\t" + chargeTwoThree + "\t\t\t\t" + timeTwoThree + "\n"); 
-    System.out.print(currentThree + "\t\t\t\t" + voltageThree + "\t\t\t\t" + chargeThreeThree + "\t\t\t\t" + timeThreeThree + "\n");
+    System.out.print(CURRENT_LOW + "\t\t\t\t" + VOLTAGE_SINGEL + "\t\t\t\t" + chargeLowSingel + "\t\t\t\t\t" + timeLowSingel + "\n");
+    System.out.print(CURRENT_MEDIUM + "\t\t\t\t" + VOLTAGE_SINGEL + "\t\t\t\t" + chargeMediumSingel + "\t\t\t\t" + timeMediumSingel + "\n");
+    System.out.print(CURRENT_LOW + "\t\t\t\t" + VOLTAGE_THREE + "\t\t\t\t" + chargeLowThree + "\t\t\t\t" + timeLowThree + "\n"); 
+    System.out.print(CURRENT_MEDIUM + "\t\t\t\t" + VOLTAGE_THREE + "\t\t\t\t" + chargeMediumThree + "\t\t\t\t" + timeMediumThree + "\n"); 
+    System.out.print(CURRENT_HIGH + "\t\t\t\t" + VOLTAGE_THREE + "\t\t\t\t" + chargeHighThree + "\t\t\t\t" + timeHighThree + "\n");
 
   }
 }
