@@ -55,7 +55,7 @@ class SalesCommissionCalculator
 		final float ITEM_TWO = 129.75f;
 		final float ITEM_TRE = 99.95f;
 		final float ITEM_FOUR = 350.89f;
-		//Sett contants for 9% commission of total sale
+		//Sett contant for 9% commission of total sale
 		final float PERCENT_COMMISSION = 0.09f;
 
 		//initiate variabls
@@ -94,12 +94,12 @@ class SalesCommissionCalculator
 					{
 						if (itemCounter < 5)
 						{
-						totalSale += ITEM_FOUR;
+							totalSale += ITEM_FOUR;
 						}
 						//if not entered correctly
 						else 
 						{
-						System.out.println("Not a valid item number, the correct items are 1, 2, 3 and 4.");
+							System.out.println("Not a valid item number, the correct items are 1, 2, 3 and 4.");
 						}
 					}
 				}
