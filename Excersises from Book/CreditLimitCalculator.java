@@ -13,7 +13,7 @@
 *customer’s credit limit. For those customers whose credit limit is exceeded, the program should display
 *the message "Credit limit exceeded".
 *
-*Psudocode:
+*pseudocode:
 *1. initiate Scanner
 *2. Initiate customer account, account balance, item charges, customer credits, credit limit, new balance
 *3.	Ask user for account number, to exit enter -1
@@ -38,8 +38,8 @@
 *22.		Display: "The inital balance for account " + account number + " was " + account balance + "." 
 *23.		Display: "This months purchases was " + item charged + " and the total credits applied was " + customer credit + "."
 *24.		Display: "The customer is within the credit limit of" + credit limit + "."
-*25.		Ask user for account number, to exit enter -1
-*26.			account number = user input
+*25.	Ask user for account number, to exit enter -1
+*26.		account number = user input
 *27. Display: you have exited the program. 	
 */
 
