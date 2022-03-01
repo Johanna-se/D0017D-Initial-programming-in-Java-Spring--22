@@ -8,7 +8,7 @@
 *produce floating-point results. Use class Scanner and sentinel-controlled iteration to obtain the data
 *from the user.
 *
-*Psudocode
+*pseudocode:
 *1. Initiat scanner-object
 *2. Initiate int milesDriven = 1, gallonsUsed 
 *3. Initiate float totalMilesPerGallon = 0, milesPerGallon
