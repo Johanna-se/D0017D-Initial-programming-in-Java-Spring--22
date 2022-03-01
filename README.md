@@ -5,7 +5,7 @@ Luleå University of Technology - LTU
 Examinator: Sandeep Patil
 
 Book: 
-Java: How to Program (Late Objects), Global Edition av Deitel/Deitel, Edition: 11
+Java: How to Program (Late Objects), Global Edition by Deitel/Deitel, Edition: 11
 ISBN: 9781292273730, ISBN-10: 1292273739
 
 Welcome to the course D0017D.  Start date: 2022-01-17
