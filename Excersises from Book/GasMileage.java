@@ -48,7 +48,8 @@ class GasMileage
 		milesDriven = input.nextInt();
 
 		// loop until sentinel value read from user
-		while (milesDriven != -1) {
+		while (milesDriven != -1) 
+		{
 			System.out.print("How many gallons were used for this trip?: ");
 			gallonsUsed = input.nextInt();
       
