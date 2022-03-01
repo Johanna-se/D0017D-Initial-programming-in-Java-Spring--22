@@ -1,5 +1,13 @@
 # D0017D-Inledande-programmering-i-Java-Lp3-4-V22
 
+Luleå University of Technology - LTU
+
+Examinator: Sandeep Patil
+
+Book: 
+Java: How to Program (Late Objects), Global Edition av Deitel/Deitel, Upplaga: 11
+Utgivningsdatum: September 2019, ISBN: 9781292273730, ISBN-10: 1292273739
+
 Welcome to the course D0017D.  Start date: 2022-01-17
 
 The course is a self-studying course, so there is no scheduling for lectures, but only the deadlines for the submissions. 
