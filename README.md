@@ -1,4 +1,4 @@
-# D0017D-Inledande-programmering-i-Java-Lp3-4-V22
+# D0017D Initial programming in Java spring 2022
 
 Luleå University of Technology - LTU
 
