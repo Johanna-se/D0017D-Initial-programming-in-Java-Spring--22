@@ -48,7 +48,7 @@ class SalesCommissionCalculator
 		// create Scanner to obtain input from command window
 		Scanner input = new Scanner(System.in);
 		
-		//initiate canstants
+		//initiate constants
 		final float BAS_SALERY = 200f;
 		//Sett constants of item prices
 		final float ITEM_ONE = 239.99f;

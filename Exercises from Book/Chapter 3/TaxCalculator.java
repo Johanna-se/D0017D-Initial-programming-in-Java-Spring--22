@@ -33,7 +33,7 @@ class TaxCalculator
 		//create Scanner to obtain input from command window
 		Scanner input = new Scanner(System.in);
 
-		//initiate canstants
+		//initiate constants
 		final float TAX_LOWER = 0.15f; 
 		final float TAX_HIGHER = 0.2f;
 		final int TAX_BREAKING_POINT = 30000;
