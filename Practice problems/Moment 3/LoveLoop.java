@@ -8,13 +8,53 @@
 *		in the condition? Try changing the way you make the increments 
 *		and test run your application again with the new enumeration.
 *
+*pseudocode:
+* initiate varible counter=1
+* while counter <= 10
+*	print: love, love everywhere
+*	counter++ 
+* alt:
+* while ++counter <= 10
+*	print: love, love everywhere
+* alt:
+* while counter++ <= 10
+*	print: love, love everywhere
 */
 
-import java.util.Scanner; // program uses class Scanner
 
 class LoveLoop
 {
 	public static void main(String[] args)
 	{
+		
+		int counter = 1; 
+
+		//alt 1
+		while (counter <= 10)
+		{
+		System.out.println ("love, love everywhere");
+		counter++;
+		}
+    
+		//alt 2
+		System.out.println ("\nThat was fun, let´s go again! \n");
+		counter = 1; //reset counter
+    
+		while (++counter <= 10)
+		{
+			System.out.println ("love, love everywhere");
+		}
+
+		//alt 3
+		System.out.println ("\nHey! That was only 9 times!");
+		System.out.println ("Once more with feeling! \n");
+		counter = 1; //reset counter
+
+		while (counter++ <= 10)
+		{
+			System.out.println ("love, love everywhere");
+		}
+    
+		System.out.println ("\nThere you go!");
 	}
 }
