@@ -17,7 +17,7 @@ class IntegersDivisibleByTre
 	public static void main(String[] args)
 	{
 		//initiate constants
-		int RANGE = 30;
+		final int RANGE = 30;
     
 		//initiate variabls
 		int sum = 0;
