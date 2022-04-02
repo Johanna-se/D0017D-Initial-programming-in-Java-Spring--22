@@ -30,75 +30,76 @@ class RollTheDiceTwo
 {
 	public static void main(String[] args)
 	{
-        //create Scanner to obtain input from command window
-        Scanner input = new Scanner(System.in);
-
-        //initiate variabls and constants
-        final int MAX = 6; //number of sides on the dice
-        final int MIN = 1; // for calculate of random roll
-
-        int numberOfRolls;
-        int diceRoll;
-
-        //declare and initiate array
-        int [] result = new int[6];
-
-        //processing phase
-        //Ask user for number of rolls to make
-        System.out.print("Number of rolls: ");
-		    numberOfRolls = input.nextInt();
-
-        //roll the dice, count and print the throws
-        for (int counter = 1; counter <= numberOfRolls; counter++)
+        try (//create Scanner to obtain input from command window
+        Scanner input = new Scanner(System.in))
         {
-            diceRoll = (int) (Math.random () * (MAX-MIN+1) +MIN);
+            //initiate variabls and constants
+            final int MAX = 6; //number of sides on the dice
+            final int MIN = 1; // for calculate of random roll
 
-            //print the roll
-            System.out.print(diceRoll + " ");
+            int numberOfRolls;
+            int diceRoll;
 
-            //static of rolls
-            if (diceRoll == 1)
-            {
-                //adds one to the first array object
-                result[0]++;
-            }
-            else if (diceRoll == 2)
-            {
-                result[1]++;
-            }
-            else if (diceRoll == 3)
-            {
-                result[2]++;
-            }
-            else if (diceRoll == 4)
-            {
-                result[3]++;
-            }
-            else if (diceRoll == 5)
-            {
-                result[4]++;
-            }
-            else
-            {
-                result[5]++;
-            }
-        }//Exit dice roll loop
-    
-        //print results
-        //for each array (result-array) element output a bar of the chart
-        for (int counter = 0; counter < result.length; counter++)
-        {
-            //print lable
-            System.out.print(counter+1 +": ");
+            //declare and initiate array
+            int [] result = new int[6];
 
-            //print bar of #
-            for (int symbol = 0; symbol < result[counter]; symbol++)
-            {
-                System.out.print("#");
-            }
+            //processing phase
+            //Ask user for number of rolls to make
+            System.out.print("Number of rolls: ");
+                numberOfRolls = input.nextInt();
 
-            System.out.println();
-        } //exit loop for printing results
+            //roll the dice, count and print the throws
+            for (int counter = 1; counter <= numberOfRolls; counter++)
+            {
+                diceRoll = (int) (Math.random () * (MAX-MIN+1) +MIN);
+
+                //print the roll
+                System.out.print(diceRoll + " ");
+
+                //static of rolls
+                if (diceRoll == 1)
+                {
+                    //adds one to the first array object
+                    result[0]++;
+                }
+                else if (diceRoll == 2)
+                {
+                    result[1]++;
+                }
+                else if (diceRoll == 3)
+                {
+                    result[2]++;
+                }
+                else if (diceRoll == 4)
+                {
+                    result[3]++;
+                }
+                else if (diceRoll == 5)
+                {
+                    result[4]++;
+                }
+                else
+                {
+                    result[5]++;
+                }
+            }//Exit dice roll loop
+   
+            //print results
+            //for each array (result-array) element output a bar of the chart
+            for (int counter = 0; counter < result.length; counter++)
+            {
+                //print lable
+                System.out.print(counter+1 +": ");
+
+                //print bar of #
+                for (int symbol = 0; symbol < result[counter]; symbol++)
+                {
+                    System.out.print("#");
+                }
+
+                System.out.println();
+            } //exit loop for printing results
+        }
     
 	}
 }
