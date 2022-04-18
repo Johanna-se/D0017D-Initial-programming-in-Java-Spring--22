@@ -1,7 +1,7 @@
 
 import java.util.Scanner; // program uses class Scanner
 
-class Uppgift1
+class Uppgift11
 {
     private static Scanner userInput = new Scanner(System.in);
 	public static void main(String[] args)

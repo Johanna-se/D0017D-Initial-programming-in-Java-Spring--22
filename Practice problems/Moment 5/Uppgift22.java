@@ -1,6 +1,6 @@
 import java.util.Scanner; // program uses class Scanner
 
-public class Uppgift2 
+public class Uppgift22 
 {
     private static Scanner userInput = new Scanner(System.in);
 	public static void main(String[] args)
