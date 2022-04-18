@@ -61,7 +61,7 @@ class Sorting
             {
                 if (array[k] > array[max])
                 {
-                     max = k;
+                    max = k;
                 }
             }
 

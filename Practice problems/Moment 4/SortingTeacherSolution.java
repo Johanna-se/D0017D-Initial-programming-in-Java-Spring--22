@@ -45,10 +45,10 @@ public class SortingTeacherSolution
                      max = k;
                 }
             }
-        // Switches places in two places in the array
-        temp = a [i];
-        a [i] = a [max];
-        a [max] = temp;
+            // Switches places in two places in the array
+            temp = a [i];
+            a [i] = a [max];
+            a [max] = temp;
         }
     
         // Print sorted
